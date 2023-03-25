@@ -1,0 +1,22 @@
+ <block wx:if="{{isAdmin}}">
+	<view style="width:100%;background-color: #fff; ">
+		<date_select class="date-fixed" selected="{{day}}" end="{{dateCmtpEndDay}}" bind:select="bindDateSelectCmpt"></date_select>
+	 
+		<view class="day-mask"></view>
+		<view class="hint"><text class="icon-info margin-right-xxs"></text>点击表格可查看预订详细，取消预订</view>
+		<view  wx:if="{{!isLoad}}" class="margin-top load loading text-l load-project"></view>
+
+		<view wx:elif="{{isLoad&&columns.list.length==0}}" class="no-appt"> 
+			<text class="icon-emoji" style="font-size: 80rpx;"></text>
+			<text class="text" style="margin-top:10rpx;">本日没有可预订的时段~</text>
+		</view>
+		<time_select wx:else day="{{day}}" isAppt="{{false}}" showDetail="detail" columnsSource="{{columns}}" bind:cancel="bindCancelCmpt" used="{{ used }}">
+		</time_select>
+	</view>
+
+	<!--<cmpt-detail mode="right" doPoster="{{false}}" doTop="{{false}}" doHome="{{true}}" doSlot="{{true}}" topBtnShow="{{topBtnShow}}" oid="{{enroll._id}}" cate="{{enroll.ENROLL_CATE_NAME}}" title="{{enroll.ENROLL_TITLE}}" cover="{{enroll.ENROLL_OBJ.cover[0]}}" qr="{{enroll.ENROLL_QR}}" desc="马上预订" bg="{{skin.PROJECT_COLOR}}">
+
+	</cmpt-detail>-->
+
+</block>
+ 

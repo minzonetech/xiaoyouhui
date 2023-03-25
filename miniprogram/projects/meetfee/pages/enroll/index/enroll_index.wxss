@@ -1,0 +1,63 @@
+@import "../../../style/skin.wxss";
+
+.main {
+	padding: 30rpx 35rpx;
+}
+
+.shadow-project {
+	box-shadow: 0 3rpx 16rpx rgba(127, 136, 141, 0.2);
+}
+
+
+.list {
+	width: 100%;
+}
+
+.list .item {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 30rpx;
+	display: flex;
+	padding: 30rpx 20rpx 30rpx 40rpx;
+	color: #333;
+}
+
+
+.list .item .left image {
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.list .item .left {
+	margin-right: 30rpx;
+	border-radius: 20%;
+	padding: 5rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list .item .right {
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.list .item .right .line1 {
+	font-size: 32rpx;
+}
+
+.list .item .arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list .item .arrow text {
+	color: var(--projectColor);
+	padding: 7rpx;
+	font-size: 26rpx;
+}

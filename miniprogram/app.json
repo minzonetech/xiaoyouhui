@@ -1,0 +1,103 @@
+{
+	"pages": [
+		"projects/meetfee/pages/news/index/news_index",
+		"projects/meetfee/pages/enroll/all/enroll_all",
+		"projects/meetfee/pages/default/index/default_index",
+		"projects/meetfee/pages/about/list/about_list",
+		"projects/meetfee/pages/about/index/about_index",
+		"projects/meetfee/pages/search/search",
+		"projects/meetfee/pages/my/index/my_index",
+		"projects/meetfee/pages/my/reg/my_reg",
+		"projects/meetfee/pages/my/edit/my_edit",
+		"projects/meetfee/pages/my/foot/my_foot",
+		"projects/meetfee/pages/my/fav/my_fav",
+		"projects/meetfee/pages/news/detail/news_detail",
+		"projects/meetfee/pages/news/cate1/news_cate1",
+		"projects/meetfee/pages/news/cate2/news_cate2",
+		"projects/meetfee/pages/admin/news/list/admin_news_list",
+		"projects/meetfee/pages/admin/news/add/admin_news_add",
+		"projects/meetfee/pages/admin/news/edit/admin_news_edit",
+		"projects/meetfee/pages/admin/setup/about/admin_setup_about",
+		"projects/meetfee/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/meetfee/pages/admin/setup/qr/admin_setup_qr",
+		"projects/meetfee/pages/admin/index/home/admin_home",
+		"projects/meetfee/pages/admin/index/login/admin_login",
+		"projects/meetfee/pages/admin/content/admin_content",
+		"projects/meetfee/pages/admin/mgr/log/admin_log_list",
+		"projects/meetfee/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/meetfee/pages/admin/mgr/list/admin_mgr_list",
+		"projects/meetfee/pages/admin/mgr/add/admin_mgr_add",
+		"projects/meetfee/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/meetfee/pages/admin/user/add/admin_user_add",
+		"projects/meetfee/pages/admin/user/list/admin_user_list",
+		"projects/meetfee/pages/admin/user/detail/admin_user_detail",
+		"projects/meetfee/pages/admin/user/export/admin_user_export",
+		"projects/meetfee/pages/enroll/join/enroll_join",
+		"projects/meetfee/pages/enroll/my_join_list/enroll_my_join_list",
+		"projects/meetfee/pages/enroll/my_join_detail/enroll_my_join_detail",
+		"projects/meetfee/pages/enroll/join_edit/enroll_join_edit",
+		"projects/meetfee/pages/enroll/lesson_log/enroll_lesson_log",
+		"projects/meetfee/pages/admin/enroll/list/admin_enroll_list",
+		"projects/meetfee/pages/admin/enroll/add/admin_enroll_add",
+		"projects/meetfee/pages/admin/enroll/edit/admin_enroll_edit",
+		"projects/meetfee/pages/admin/enroll/join_list/admin_enroll_join_list",
+		"projects/meetfee/pages/admin/enroll/export/admin_enroll_export",
+		"projects/meetfee/pages/admin/enroll/temp/admin_enroll_temp",
+		"projects/meetfee/pages/admin/enroll/day/admin_enroll_day",
+		"projects/meetfee/pages/admin/enroll/record/admin_enroll_record",
+		"projects/meetfee/pages/enroll/index/enroll_index",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#4988FD",
+		"navigationBarTitleText": "体育场馆预订与扣费小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#4988FD",
+		"list": [
+			{
+				"pagePath": "projects/meetfee/pages/news/index/news_index",
+				"text": "最新通知",
+				"iconPath": "/projects/meetfee/images/tabbar/news.png",
+				"selectedIconPath": "/projects/meetfee/images/tabbar/news_cur.png"
+			},
+			{
+				"pagePath": "projects/meetfee/pages/enroll/index/enroll_index",
+				"text": "场地预订",
+				"iconPath": "/projects/meetfee/images/tabbar/day.png",
+				"selectedIconPath": "/projects/meetfee/images/tabbar/day_cur.png"
+			},
+			{
+				"pagePath": "projects/meetfee/pages/enroll/my_join_list/enroll_my_join_list",
+				"text": "我的预订",
+				"iconPath": "/projects/meetfee/images/tabbar/enroll.png",
+				"selectedIconPath": "/projects/meetfee/images/tabbar/enroll_cur.png"
+			},
+			{
+				"pagePath": "projects/meetfee/pages/my/index/my_index",
+				"text": "个人中心",
+				"iconPath": "/projects/meetfee/images/tabbar/my.png",
+				"selectedIconPath": "/projects/meetfee/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,20 @@
+<view class="main">
+	<view class="list">
+		 <view class="item shadow-project" wx:for="{{cateList}}" wx:key="k" bindtap="url" data-url="../all/enroll_all?id={{item.id}}">
+			<view class="left"><image  src="../../../images/menu/{{item.id}}.png"/></view>
+			<view class="right">
+				<view class="line1">{{item.title}}</view>
+			</view>
+			<view class="arrow "><text class="icon-right"></text></view>
+		 </view>
+	</view>
+
+</view>
+
+<view style="height:130rpx"></view>
+
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'enroll_index',returnHome:false}}" />
+</block>

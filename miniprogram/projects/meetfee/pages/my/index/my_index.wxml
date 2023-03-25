@@ -1,0 +1,130 @@
+<view class="main">
+	<image class="bg" mode="widthFix" src="../../../images/my.jpg" />
+	<view class="top" bindtap="url" data-url="{{user?'../edit/my_edit':'../reg/my_reg'}}">
+		<view class="left">
+			<image mode="aspectFill" src="../../../images/tabbar/my_cur.png"></image>
+		</view>
+		<view class="right">
+			<view class="name content-cut-one">
+				<text>{{user?user.USER_NAME:'注册 / 登录'}}</text>
+				<text wx:if="{{user&&user.USER_STATUS==9}}" class="tag small radius bg-red margin-left-xs light">已禁用</text>
+			</view>
+			<view class="desc">{{user?'欢迎回来~~~':'马上注册，使用更多功能'}}</view>
+		</view>
+
+	</view>
+
+	<view class="menu">
+		<view class="item">
+			<view class="title">¥{{user?user.USER_LESSON_TOTAL_CNT:'0'}}</view>
+			<view class="desc">剩余费用</view>
+		</view>
+		<view class="item">
+			<view class="title">¥{{user?user.USER_LESSON_USED_CNT:'0'}}</view>
+			<view class="desc">已用费用</view>
+		</view>
+		<view class="item" bindtap="url" data-url="../../enroll/lesson_log/enroll_lesson_log">
+			<view class="title" style="font-size: 28rpx;">费用记录</view>
+			<view class="desc">查看变更</view>
+		</view>
+	</view>
+
+	<view class="meet-menu">
+		<!--<view class="padding-s">我的预订</view>-->
+		<view class="inner">
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../enroll/my_join_list/enroll_my_join_list?status=run">
+				<view class="img">
+					<image src="../../../images/my/use.png" />
+				</view>
+				<text>可使用</text>
+			</view> 
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../enroll/my_join_list/enroll_my_join_list?status=out">
+				<view class="img">
+					<image src="../../../images/my/out.png" />
+				</view>
+				<text>已过期</text>
+			</view>
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../enroll/my_join_list/enroll_my_join_list?status=cancel">
+				<view class="img">
+					<image src="../../../images/my/cancel.png" />
+				</view>
+				<text>用户取消</text>
+			</view>
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../enroll/my_join_list/enroll_my_join_list?status=syscancel">
+				<view class="img">
+					<image src="../../../images/my/syscancel.png" />
+				</view>
+				<text>系统取消</text>
+			</view>
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../enroll/my_join_list/enroll_my_join_list">
+				<view class="img">
+					<image src="../../../images/my/all.png" />
+				</view>
+				<text>全部预订</text>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="list-menu">
+		<view wx:if="{{user&&user.USER_STATUS!=9}}" class="item" bindtap="url" data-url="../edit/my_edit">
+			<view class="title">
+				<text class="icon-edit title-ico"></text>
+				<text>修改我的个人资料</text>
+			</view>
+		</view>
+
+		<view class="item" bindtap="url" data-url="../fav/my_fav">
+			<view class="title">
+				<text class="icon-favor title-ico"></text>
+				<text>我的收藏</text>
+			</view>
+		</view>
+		<view class="item" bindtap="url" data-url="../foot/my_foot">
+			<view class="title">
+				<text class="icon-footprint title-ico"></text>
+				<text>历史浏览</text>
+			</view>
+		</view>
+
+
+	 
+
+		<view class="item" wx:if="{{skin.IS_SUB}}" bindtap="bindSetTap">
+			<view class="title">
+				<text class="icon-settings title-ico"></text>
+				<text class="text-red text-bold">系统后台管理<text class="text-grey text-normal">（点击试用）</text></text>
+			</view>
+		</view>
+
+		<view class="item" bindtap="url" data-url="../../about/index/about_index?key=SETUP_CONTENT_ABOUT">
+			<view class="title">
+				<text class="icon-service title-ico"></text>
+				<text>关于我们</text>
+			</view>
+		</view>
+
+		<view class="item" wx:if="{{skin.IS_SUB}}" bindtap="url" data-url="/pages/home/about/home_about">
+			<view class="title">
+				<text class="icon-phone title-ico"></text>
+				<text class="text-orange">联系作者了解更多详情</text>
+			</view>
+		</view>
+
+		<view class="item" wx:if="{{!skin.IS_SUB}}" bindtap="bindSetTap">
+			<view class="title">
+				<text class="icon-settings title-ico"></text>
+				<text>设置</text>
+			</view>
+		</view>
+
+	</view>
+	<view style="height:150rpx"></view>
+
+</view>
+
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'my_index',returnHome:false}}" />
+</block>
